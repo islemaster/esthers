@@ -1,10 +1,12 @@
+<img src="./album_art.jpg" align="left" height="180" />
+
 # Toast
 
 A Brunch Story by Alleson and Brad Buchanan
 
-<img src="./album_art.jpg" style="float:right" />
-
 Initially released for [IFComp 2022](https://ifcomp.org).
+
+&nbsp;
 
 ## Development
 
