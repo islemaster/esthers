@@ -1,0 +1,614 @@
+:: StoryData
+{
+  "format": "Snowman",
+  "format-version": "2.0.3",
+  "ifid": "E66FC404-B49E-49A7-BB70-C1A454E5B060",
+  "start": "Start"
+}
+
+:: StoryTitle
+Esther's
+
+:: Start
+
+<div.title-page>
+
+<img src="./img/avocado_icon_180.png" style="max-width: 110px" />
+
+# <%= story.title %>
+
+## A brunch story by Brad and Alleson Buchanan
+
+<span style="font-size: larger">[[Play]]</span>
+<br />[[Acknowledgements->Title-Acknowledgements]]
+
+</div>
+
+<div.runtime>
+Length: 20-30&nbsp;pages, 5-7&nbsp;minutes
+</div>
+
+:: Play
+
+<img src="./img/harold_and_janie.jpg" />
+
+Once there were two brown mice who lived on Beech Street.
+
+<span.janie>Janie</span> was bright and meticulous. She brought <span.harold>Harold</span> flowers plucked from her garden in the spring.
+
+<span.harold>Harold</span> was playful and always hungry. He carried <span.janie>Janie's</span> picture-books home from the library around the corner.
+
+- [[Every Saturday... >>>->Every Saturday]]
+
+:: Every Saturday
+
+<img src="./img/esther_cafe.jpg" />
+
+Every Saturday <span.janie>Janie</span> and <span.harold>Harold</span> went to get brunch at <span.esther>Esther's</span> cafe.
+They always ordered mimosas and avocado toast.
+
+<span.esther>Esther</span> always brought them a bit of cheese and cracker instead.
+She was very nice, but she didn't speak squeak.
+
+- [[One day... >>>->One day]]
+
+:: One day
+
+One day <span.janie>Janie</span> said to <span.harold>Harold</span>,
+"I'm tired of eating cheese.
+Why can't they get our order right?
+Go tell <span.esther>Esther</span> we are not leaving until we get our mimosas and avocado toast."
+
+- [[All right then->Harold goes to see Esther]]
+- [[Do I have to?->Janie goes to see Esther]]
+- [[What's a mimosa?]]
+
+:: What's a mimosa?
+
+"What's a mimosa?" asked <span.harold>Harold</span>.
+
+"I'm not sure," said <span.janie>Janie</span>, "but I know it has orange juice and it goes with brunch. Now please go ask <span.esther>Esther</span> to fix our order."
+
+- [[All right then->Harold goes to see Esther]]
+- [[Do I have to?->Janie goes to see Esther]]
+
+:: Harold goes to see Esther
+
+"All right then," said <span.harold>Harold</span>, and he scurried over to see <span.esther>Esther</span>. "I can also order my favorite pudding," he thought to himself.
+
+- [["Vanilla. It pairs well with everything!"->Harold/Vanilla]]
+- [["Chocolate, because it's Janie's favorite too."->Harold/Chocolate]]
+- [["Tapioca. I like that word! Tappy-OH-kuh..."->Harold/Tapioca]]
+
+:: Harold/Vanilla
+<% s.favoritePudding = 'vanilla' %>
+<%= story.render('Harold complains to Esther') %>
+
+:: Harold/Chocolate
+<% s.favoritePudding = 'chocolate' %>
+<%= story.render('Harold complains to Esther') %>
+
+:: Harold/Tapioca
+<% s.favoritePudding = 'tapioca' %>
+<%= story.render('Harold complains to Esther') %>
+
+:: Harold complains to Esther
+
+<img src="./img/harold_complains_to_esther.jpg" />
+
+"<span.esther>Esther</span>, there seems to be a problem with our order," <span.harold>Harold</span> timidly began.
+"We ordered avocado toast, but you brought us a bit of cheese.
+May we have mimosas and avocado toast please? And perhaps a <%= s.favoritePudding %> pudding?"
+
+<span.esther>Esther</span> heard "Squeak _squeak_ squeeeak squeak?"
+She smiled and gave <span.harold>Harold</span> a scratch behind the ears.
+
+- [[Tell Janie that Esther doesn't understand->It's no use]]
+- [[Just eat the cheese]]
+
+:: Janie goes to see Esther
+
+"Do I have to?" said <span.harold>Harold</span>. "Look, we have a nice table here at the cafe and <span.esther>Esther</span> always brings us a good bit of cheese. I don't want to complain."
+
+"Then I'll do it myself," said <span.janie>Janie</span>.
+She got up from the table to go see <span.esther>Esther</span>.
+
+"In that case, order a pudding for me?" called <span.harold>Harold</span> "My favorite flavor!"
+
+"I know," said <span.janie>Janie</span>. "You always get..."
+
+- [["Vanilla so you can add all sorts of toppings."->Janie/Vanilla]]
+- [["Chocolate! I might have some too."->Janie/Chocolate]]
+- [["Tapioca. Ick! I don't know how you eat that stuff."->Janie/Tapioca]]
+
+:: Janie/Vanilla
+<% s.favoritePudding = 'vanilla' %>
+<%= story.render('Janie complains to Esther') %>
+
+:: Janie/Chocolate
+<% s.favoritePudding = 'chocolate' %>
+<%= story.render('Janie complains to Esther') %>
+
+:: Janie/Tapioca
+<% s.favoritePudding = 'tapioca' %>
+<%= story.render('Janie complains to Esther') %>
+
+:: Janie complains to Esther
+
+<img src="./img/janie_complains_to_esther.jpg" />
+
+"<span.esther>Esther</span>, there is a problem with our order," <span.janie>Janie</span> squeaked as loud as she could.
+"We ordered toast, but you brought us cheese.
+Will you please make us mimosas and an avocado toast?"
+
+"And a <%= s.favoritePudding %> pudding!" called Harold.
+
+<span.esther>Esther</span> heard "Squeak _squeak_ squeeeak squeak?"
+She smiled and gave <span.janie>Janie</span> a scratch behind the ears.
+
+<span.janie>Janie</span> returned to the table to find <span.harold>Harold</span> nibbling the cheese.
+
+- [[Tell Harold to stop eating cheese]]
+- [[Tell Harold the plan]]
+
+:: Tell Harold to stop eating cheese
+
+"Don't eat the cheese <span.harold>Harold</span>!" said <span.janie>Janie</span>. "We need to find a way to ask <span.esther>Esther</span> for mimosas and avocado toast."
+
+"Okay," said <span.harold>Harold</span>, and he set down the cheese and waved <span.esther>Esther</span> over to their tiny table.
+
+<% s.eatableFoods = ['crackers'] %>
+<%= story.render('Menu') %>
+
+:: Tell Harold the plan
+
+"<span.esther>Esther</span> didn't understand me. She doesn't speak squeak," said <span.janie>Janie</span>
+
+"Oh well," said <span.harold>Harold</span>, nibbling another bit of cheese.
+
+"We're not giving up that easily," said <span.janie>Janie</span>. "We will find another way to ask <span.esther>Esther</span> for mimosas and avocado toast." <span.janie>Janie</span> waved <span.esther>Esther</span> over to the tiny table.
+
+<% s.eatableFoods = ['crackers'] %>
+<%= story.render('Menu') %>
+
+:: It's no use
+
+"It's no use," said <span.harold>Harold</span>, "because <span.esther>Esther</span> doesn't speak squeak. She doesn't understand our order."
+
+"Then we'll make her understand," said <span.janie>Janie</span>, and she waved <span.esther>Esther</span> over to the tiny table.
+
+<% s.eatableFoods = ['crackers', 'cheese'] %>
+<%= story.render('Menu') %>
+
+:: Just eat the cheese
+
+"<span.esther>Esther</span> didn't understand me. Oh well," said <span.harold>Harold</span>, and he happily gobbled the cheese.
+
+"We're not giving up that easily," said <span.janie>Janie</span>, and she waved <span.esther>Esther</span> over to the tiny table.
+
+<% s.eatableFoods = ['crackers'] %>
+<%= story.render('Menu') %>
+
+:: Menu
+
+<%
+var menuItemsShown = 0
+
+// The next few items transform or combine items you've got, moving the story forward.
+
+// Scraping the cinnamon off the toast gets you buttered toast.
+if (isVisited('Pretend to eat toast') && !isVisited('Scrape the cinnamon off of the toast')) {
+  menuItemsShown++ %>
+  - [[Scrape the cinnamon off of the toast]]<%
+}
+
+// Drinking the "coffee" leaves you with empty cups.
+if (isVisited('Pretend to drink mimosas') && !isVisited('Drink coffee')) {
+  menuItemsShown++ %>
+  - [[Drink coffee]]<%
+}
+
+// Squeezing the orange into the cup makes a "mimosa"
+if (s.hasEmptyCup && s.hasOrangeSlice && !isVisited('Squeeze the orange into the cup')) {
+  menuItemsShown++ %>
+  - [[Squeeze the orange into the cup]]<%
+}
+
+// Putting guacamole on the toast makes "avocado toast"
+if (!isVisited('Put the guacamole on the toast') && s.hasButteredToast && s.hasAvocado) {
+  menuItemsShown++ %>
+  - [[Put the guacamole on the toast]]<%
+}
+
+// Once you have both, you can just enjoy your brunch!
+if (!isVisited('Enjoy brunch') && s.hasMimosa && s.hasAvocadoToast) {
+  menuItemsShown++ %>
+  - [[Enjoy brunch]]<%
+}
+
+// The first challenge is to tell Esther you want to order.
+if (!s.estherTakingYourOrder) {
+  if (!isVisited('Protest')) {
+  menuItemsShown++ %>
+  - [[Protest]]<%
+  }
+  if (!isVisited('Squeak louder')) {
+  menuItemsShown++ %>
+  - [[Squeak louder]]<%
+  }
+  if (!isVisited('Push the plate away')) {
+  menuItemsShown++ %>
+  - [[Push the plate away]]<%
+  }
+  if (!isVisited('Point at the menu')) {
+  menuItemsShown++ %>
+  - [[Point at the menu]]<%
+  }
+} else {
+  // Now that Esther's taking your order, you have to say what you want.
+
+  // Reading the menu reveals a couple of mystery items.
+  if (!s.hasReadMenu) {
+  menuItemsShown++ %>
+  - [[Read the menu]]<%
+  }
+
+  // The orange circle gets you an orange slice.
+  if (s.hasReadMenu && !isVisited('Point at the orange circle on the menu')) {
+  menuItemsShown++ %>
+  - [[Point at the orange circle on the menu]]<%
+  }
+
+  // The yellow triangle gets you a quesadilla.
+  if (s.hasReadMenu && !isVisited('Point at the yellow triangle on the menu')) {
+  menuItemsShown++ %>
+  - [[Point at the yellow triangle on the menu]]<%
+  }
+
+  // Pretending to drink mimosas will get you "coffee."
+  if (!isVisited('Pretend to drink mimosas')) {
+  menuItemsShown++ %>
+  - [[Pretend to drink mimosas]]<%
+  }
+
+  // Pretending to eat toast gets you cinnamon toast.
+  if (isVisited('Pretend to drink mimosas') && !isVisited('Pretend to eat toast')) {
+  menuItemsShown++ %>
+  - [[Pretend to eat toast]]<%
+  }
+
+  // Pretending to be an avocado is just funny.
+  if (!isVisited('Do your best impression of an avocado') && !(s.hasAvocado || s.hasAvocadoToast)) {
+  menuItemsShown++ %>
+  - [[Do your best impression of an avocado]]<%
+  }
+}
+
+// Eating is an option as long as there's food on the table.
+if (menuItemsShown < 3 && s.eatableFoods.length && !(s.hasAvocadoToast && s.hasMimosa)) {
+  menuItemsShown++ %>
+  - [[Eat <%= s.eatableFoods[s.eatableFoods.length - 1] %>]]<%
+}
+%>
+
+:: Eat cheese
+
+"I like cheese," mumbled <span.harold>Harold</span> around shreds of sharp cheddar.
+
+"So do I," said <span.janie>Janie</span>, picking at a bit of asadero, "but today I'd rather have avocado toast."
+
+<% removeFrom(s.eatableFoods, 'cheese') %>
+<%= story.render('Menu') %>
+
+:: Eat crackers
+
+"Crackers are very good too," crunched <span.harold>Harold</span> with his mouth full.
+
+<% if (s.hasMimosa) { %>
+"They pair well with our mimosas," conceded <span.janie>Janie</span>.
+<% } else { %>
+"They would pair well with a mimosa," said <span.janie>Janie</span>.
+"All we need is <%= (s.hasOrangeSlice && s.hasEmptyCup) ? "orange juice in these cups" : [!s.hasOrangeSlice && "some orange juice", !s.hasEmptyCup && "an empty cup"].filter(x => x).join(' and ') %>."
+<% } %>
+
+<span.esther>Esther</span> giggled at <span.harold>Harold</span>. "What a good appetite you have today!"
+
+<% removeFrom(s.eatableFoods, 'crackers') %>
+<%= story.render('Menu') %>
+
+:: Eat the quesadilla
+
+<span.harold>Harold</span> folded up the quesadilla and took a big bite.
+
+<% if (s.hasAvocadoToast) { %>
+<span.janie>Janie</span> gave <span.harold>Harold</span> a look. "What?" said <span.harold>Harold</span>.
+<% } else { %>
+<span.janie>Janie</span> protected the guacamole. "Don't eat this! We need it for the avocado toast."
+<% } %>
+
+<% removeFrom(s.eatableFoods, 'the quesadilla') %>
+<%= story.render('Menu') %>
+
+:: Eat the orange slice
+
+<img src="./img/orange_slice.jpg" />
+
+<span.harold>Harold</span> tasted the orange slice and smacked his lips.
+
+"Hey, we need that!" said <span.janie>Janie</span>. "We can use the orange juice for our mimosas.<% if (!s.hasEmptyCup) {%> If only we had an empty cup.<% } %>"
+
+<% removeFrom(s.eatableFoods, 'the orange slice') %>
+<%= story.render('Menu') %>
+
+:: Eat the toast
+
+<span.harold>Harold</span> reached for the toast. "No!" cried <span.janie>Janie</span>. "We need that for our avocado toast!"
+
+"Oh right," said <span.harold>Harold</span>, and he looked for something else to eat.
+
+<% removeFrom(s.eatableFoods, 'the toast') %>
+<%= story.render('Menu') %>
+
+:: Eat the cinnamon sugar
+
+<img src="./img/harold_licks_the_spoon.jpg" />
+
+<span.harold>Harold</span> picked up the spoon and licked up all the cinnamon sugar. "Yum!" he said.
+
+"You'll ruin your appetite," said <span.janie>Janie</span>.
+
+"Not possible," said <span.harold>Harold</span>.
+
+<% removeFrom(s.eatableFoods, 'the cinnamon sugar') %>
+<%= story.render('Menu') %>
+
+:: Squeak louder
+
+<span.janie>Janie</span> and <span.harold>Harold</span> squeaked at the top of their little lungs, "TWO MIMOSAS AND THE AVOCADO TOAST PLEASE."
+
+<span.esther>Esther</span> heard "SQUEAK SQUEAK SQUEEEAK SQUEAK." She looked confused. "What's wrong?" she asked. "Is the cheese no good today?"
+
+<%= story.render('Menu') %>
+
+:: Protest
+
+<span.janie>Janie</span> and <span.harold>Harold</span> scribbled on their tiny placemats and marched around the table. "MORE MIMOSAS FOR MICE!" they chanted, "AVO TOAST OR BUST!"
+
+But <span.esther>Esther</span> couldn't read their mouse-writing. She smiled and clapped along with their chant, but she did not bring them mimosas or avocado toast.
+
+<%= story.render('Menu') %>
+
+:: Push the plate away
+
+<% var plateFoods = s.eatableFoods.filter(food => ['cheese', 'crackers'].includes(food)) %>
+
+<span.janie>Janie</span> slid the plate<%= plateFoods.length ? ' of ' + plateFoods.join(' and ') : '' %> toward <span.esther>Esther</span>. "Oh," said <span.esther>Esther</span>. "Did you want something <%= plateFoods.length ? 'different' : 'else' %> today?" <span.harold>Harold</span> nodded. <span.janie>Janie</span> clapped.
+
+<% s.estherTakingYourOrder = true %>
+<%= story.render('Menu') %>
+
+:: Point at the menu
+
+<img src="./img/menu.jpg" />
+
+<span.janie>Janie</span> and <span.harold>Harold</span> pointed together at the chalkboard.
+It had swirly writing and a yellow triangle and an orange circle.
+
+"Oh!" said <span.esther>Esther</span>. "You want to order something else?" <span.harold>Harold</span> nodded. <span.janie>Janie</span> clapped.
+
+<% s.hasReadMenu = true %>
+<% s.estherTakingYourOrder = true %>
+<%= story.render('Menu') %>
+
+:: Read the menu
+
+<img src="./img/menu.jpg" />
+
+<span.harold>Harold</span> and <span.janie>Janie</span> looked up at the chalkboard.
+They saw swirly writing,
+and also a yellow triangle and an orange circle.
+
+<% s.hasReadMenu = true %>
+<%= story.render('Menu') %>
+
+:: Pretend to drink mimosas
+
+<img src="./img/pretend_clink.jpg" />
+
+<span.janie>Janie</span> and <span.harold>Harold</span> clinked invisible glasses pretended to sip mimosas.
+
+"You want something to drink," declared <span.esther>Esther</span>. "How about a coffee?"
+She went to the kitchen and returned with two little plastic cups of creamer, which she opened and set on the table.
+
+<%= story.render('Menu') %>
+
+:: Do your best impression of an avocado
+
+<img src="./img/avocado.jpg" />
+
+"What's an avocado look like?" asked <span.harold>Harold</span>.
+
+"Something like this," said <span.janie>Janie</span>. She flattened her ears and poofed out her fur and did her best to look like an avocado.
+
+<span.esther>Esther</span> and <span.harold>Harold</span> giggled at <span.janie>Janie's</span> funny pose. "But <span.esther>Esther</span> still doesn't get it," said <span.harold>Harold</span>. "What do we try next?"
+
+<%= story.render('Menu') %>
+
+:: Pretend to eat toast
+
+<span.janie>Janie</span> buttered an invisible toast and pretended to nibble at it.
+<span.harold>Harold</span> stuffed his pretend toast in his mouth. He licked his fingers with pretend satisfaction.
+
+"Toast? I can make that!" said <span.esther>Esther</span>.
+
+- [["You'll love it," she said, running to the kitchen.->Get cinnamon toast]]
+
+:: Get cinnamon toast
+
+<span.esther>Esther</span> returned with a slice of buttered toast, topped  with lots of cinnamon and sugar.
+
+<% if (s.hasAvocado) {
+%>"Excellent!" said <span.janie>Janie</span>, smiling at <span.esther>Esther</span>. "We have avocado, and toast. Now we can put them together!"<%
+} else {
+%>"Well, that's a start!" said <span.janie>Janie</span>, smiling at <span.esther>Esther</span>. "Now we need some avocado."<%
+} %> <span.harold>Harold</span> rubbed his paws together in anticipation.
+
+<% addTo(s.eatableFoods, 'the toast') %>
+<%= story.render('Menu') %>
+
+:: Point at the orange circle on the menu
+
+<img src="./img/orange_slice.jpg" />
+
+<span.harold>Harold</span> pointed up at the orange circle, squeaking for emphasis.
+"One seasonal fruit, coming right up!" said <span.esther>Esther</span>.
+A moment later she set a gigantic orange slice on their little table. "Bon appétit!"
+
+<% s.hasOrangeSlice = true %>
+<% addTo(s.eatableFoods, 'the orange slice') %>
+<%= story.render('Menu') %>
+
+:: Point at the yellow triangle on the menu
+
+<span.janie>Janie</span> looked at <span.esther>Esther</span> and pointed up at the yellow triangle on the menu.
+"You want the special?" asked <span.esther>Esther</span>. "And here I thought you weren't in the mood for cheese."
+She smiled and disappeared into the kitchen.
+
+<span.esther>Esther</span> returned with a slice of yellow cheese inside a cold tortilla, and a little cup of guacamole.
+"Here's your quesadilla!"
+
+"Oh look," said <span.janie>Janie</span>, "avocado!" She set the guacamole aside.<% if (!isVisited('Pretend to eat toast')) { %> "Now we just need some toast."<% } %>
+
+<% addTo(s.eatableFoods, 'the quesadilla') %>
+<% s.hasAvocado = true %>
+<%= story.render('Menu') %>
+
+:: Drink coffee
+
+<img src="./img/drink_coffee.jpg" />
+
+<span.janie>Janie</span> sniffed at the coffee creamer.
+<span.harold>Harold</span> took a sip. "Mmmmm!" he hummed, a smile spreading across his lips.
+He emptied his cup.
+"Are you going to drink that?" he asked, reaching across the table for <span.janie>Janie's</span> cup.
+
+"Not until there's orange juice in it," said <span.janie>Janie</span> as she handed the cup to <span.harold>Harold</span>.
+
+<% s.hasEmptyCup = true %>
+<%= story.render('Menu') %>
+
+:: Squeeze the orange into the cup
+
+<span.janie>Janie</span> wrung the orange slice over their cups, filling them with orange juice.
+She took a sip and smiled.
+
+"Close enough," she declared, handing one to <span.harold>Harold</span>. "Cheers!"
+
+"Cheers!" cried <span.harold>Harold</span>.<% if (!s.hasAvocadoToast) { if (s.hasAvocado && isVisited('Pretend to eat toast')) { %> "Now we need to combine our avocado and our toast."<% } else { %> "Now what about the avocado toast?"<% } } %>
+
+<% s.hasEmptyCup = false %>
+<% s.hasOrangeSlice = false %>
+<% removeFrom(s.eatableFoods, 'the orange slice') %>
+<% s.hasMimosa = true %>
+<%= story.render('Menu') %>
+
+:: Scrape the cinnamon off of the toast
+
+<span.janie>Janie</span> scraped the cinnamon-sugar topping off of the toast with a plastic spoon.
+
+<span.esther>Esther</span> looked puzzled. "But that's the best part!"
+
+<% addTo(s.eatableFoods, 'the cinnamon sugar') %>
+<% s.hasButteredToast = true %>
+<%= story.render('Menu') %>
+
+:: Put the guacamole on the toast
+
+<span.janie>Janie</span> spread the guacamole on the toast and held it out to <span.harold>Harold</span>.  They each took a bite.
+
+<% if (s.hasMimosa) { %>"Tasty!" said <span.harold>Harold</span>.<% } %>
+
+"Wonderful," said <span.janie>Janie</span>, closing her eyes to savor the toast.
+"Thank you <span.esther>Esther</span>!<% if (!s.hasMimosa) { %> Now we just need our mimosas."
+
+"And our <%= s.favoritePudding %> pudding," added <span.harold>Harold</span><% } else { %>"<% } %>
+
+<% removeFrom(s.eatableFoods, 'the toast') %>
+<% s.hasButteredToast = false %>
+<% s.hasAvocado = false %>
+<% s.hasAvocadoToast = true %>
+<%= story.render('Menu') %>
+
+:: Enjoy brunch
+
+<span.harold>Harold</span> and <span.janie>Janie</span> smiled up at <span.esther>Esther</span>. "Thank you!" they squeaked. Then they gobbled up their mimosas and avocado toast.
+
+"That was lovely," said <span.janie>Janie</span>.
+
+- "[[Now all we need is dessert]]," said <span.harold>Harold</span>.
+
+:: Now all we need is dessert
+
+<img src="./img/pudding_cup_<%= s.favoritePudding %>.jpg" />
+
+At that moment, <span.father>Esther's father</span> stepped into the yard, carrying a <%= s.favoritePudding %> pudding cup for <span.esther>Esther</span>.
+He was so surprised by the mice that he dropped the pudding right onto <span.harold>Harold's</span> head!
+
+"Eek!" yelled <span.father>Esther's father</span>.
+
+"Squeak!" yelled <span.janie>Janie</span>.
+
+"Yum!" yelled <span.harold>Harold</span> from inside the pudding cup.
+
+As the two mice scurried away, they agreed it was the best brunch they'd ever had.
+
+<div.the-end>
+<img src="./img/avocado_icon_32.png" />
+[[The End->Endnote]]
+<img src="./img/avocado_icon_32.png" />
+</div>
+
+:: Acknowledgements
+
+Built with <a href="https://videlais.github.io/snowman/#/" target="_blank">Snowman 2.0.3</a> and <a href="http://www.motoslave.net/tweego/" target="_blank">Tweego 2.1.1</a>.
+
+Deepest thanks to our playtesters: Alex, Anisha, Emmanuel, Eric, Josephine, Madelyn, Marisa, Victor, and Yotam.
+
+:: Title-Acknowledgements
+
+<%= story.render('Acknowledgements') %>
+
+- [[Back to title page->Start]]
+
+:: Endnote
+
+<%= story.render('Acknowledgements') %> 
+
+We hope you enjoyed our story. May you be as determined as Janie to get your mimosas and avocado toast, and as happy as Harold with the cheese along the way. Cheers!
+
+♡ <a href="https://bradleycbuchanan.com" target="_blank">B.</a> & <a href="https://radiantneon.com" target="_blank">A.</a>
+
+<div.right-align>
+<img src="./img/avocado_icon_24.png" /> <a href="javascript:location.reload()">Start over?</a>
+<br /><img src="./img/avocado_icon_24.png" /> [[Extras]]
+</div>
+
+:: Extras
+
+A puzzle map from partway through development.
+
+<a href="./img/puzzle_graph.jpg" target="_blank" style="cursor: zoom-in"><img src="./img/puzzle_graph.jpg" style="max-width: 100%"></a>
+
+Drawings
+
+<a href="./img/bonus_01.jpg" target="_blank" style="cursor: zoom-in"><img src="./img/bonus_01.jpg" style="max-width: 100%"></a>
+
+<a href="./img/bonus_02.jpg" target="_blank" style="cursor: zoom-in"><img src="./img/bonus_02.jpg" style="max-width: 100%"></a>
+
+<a href="./img/bonus_03.jpg" target="_blank" style="cursor: zoom-in"><img src="./img/bonus_03.jpg" style="max-width: 100%"></a>
+
+<a href="./img/bonus_04.jpg" target="_blank" style="cursor: zoom-in"><img src="./img/bonus_04.jpg" style="max-width: 100%"></a>
+
+<div.right-align>
+<img src="./img/avocado_icon_24.png" /> <a href="javascript:location.reload()">Start over?</a>
+</div>

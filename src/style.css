@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&family=IM+Fell+English+SC&family=IM+Fell+English:ital@0;1&display=swap');
+
+/*
+Paint colors
+Harold fur    #a36800 70%
+Janie fur     #835401 70%
+Janie dress   #2c6900 80%
+Harold tie    #2c6900 80%
+Harold vest   #590099 80%
+Noses         #cf40cb 80%
+
+Chairs        #66615d 80%
+Table         #ebd6cf 80%
+
+Backdrop      #9bccfc 80%
+*/
+
+body {
+  background-color: #5f446f;
+  overflow-x: hidden;
+}
+
+tw-story {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-color: white;
+  max-width: 600px;
+  margin: 1em auto;
+  min-height: 600px;
+  padding: 2em;
+
+  line-height: 160%;
+  font-family: "IM Fell English", "Georgia", "Verdana", serif;
+  font-size: 24px;
+  color: #333;
+
+  border: darkslategray solid thin;
+  box-shadow: 3px 3px 4px 1px #0005;
+}
+@media only screen and (max-width: 600px) {
+  tw-story {
+    margin: 0.5em auto 2.5em;
+    padding: 1em;
+    min-height: calc(100vh - 5em);
+  }
+}
+
+tw-story p {
+  margin: 18px 0;
+}
+
+tw-story p.img-container {
+ text-align: center;
+}
+tw-story p.img-container > img {
+  max-width: 100%;
+  max-height: 350px;
+}
+
+#character-watermark {
+  position: absolute;
+  top: 10vh;
+  left: calc(100% - 10px);
+  writing-mode: vertical-rl;
+  font-family: "IM Fell DW Pica";
+  font-size: 100px;
+  line-height: 100%;
+  color: #fff6;
+}
+@media only screen and (max-width: 600px) {
+  /* No watermark on mobile */
+  #character-watermark { display: none; }
+}
+
+tw-story strong {
+  font-family: "IM Fell DW Pica", "Georgia", "Verdata", serif;
+}
+
+tw-story a {
+  font-family: "IM Fell DW Pica", "Georgia", "Verdata", serif;
+  /* font-weight: bold; */ /* The font does the work. */
+  color: #912d38;
+  text-decoration: none;
+}
+tw-story a:hover {
+  color: #e0273c;
+}
+tw-story .link-like {
+  /* Keep consistent with link style (font, boldness) but not color */
+  font-family: "IM Fell DW Pica", "Georgia", "Verdata", serif;
+}
+
+tw-story ul {
+  list-style-image: url('./img/avocado_icon_24.png');
+  /* list-style-type: "🥑 "; */
+  line-height: 150%;
+}
+tw-story ul li::marker {
+  font-family: "IM Fell DW Pica";
+ /* font-weight: bold; */
+}
+
+/* Text that's a little faded out, usually when it's been
+   read and a new part of the passage has been revealed. */
+tw-story .faded-text {
+  transition: color 300ms;
+  color: #888;
+}
+
+tw-story .new-text {
+  transition: color 
+}
+
+blockquote {
+  font-style: italic;
+}
+
+.title-page {
+  text-align: center;
+}
+@media only screen and (max-width: 600px) {
+  .title-page {
+    margin-top: 5vh;
+  }
+}
+.title-page h1 {
+  font-size: 3em;
+}
+@media only screen and (max-width: 600px) {
+  .title-page h1 {
+    font-size: 2em;
+    line-height: 100%;
+  }
+}
+.title-page h2 {
+  font-size: 1.2em;
+}
+.title-page h3 {
+  font-size: 1.2em;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+@media only screen and (max-width: 600px) {
+  .title-page h3 {
+    margin-top: unset;
+    margin-bottom: unset;
+  }
+}
+.title-page a {
+  font-size: larger;
+}
+.runtime {
+  text-align: center;
+  color: #6f6f6f;
+}
+
+.the-end {
+  text-align: center;
+  font-variant: small-caps;
+}
+.the-end img {
+  transform: translateY(6px);
+  margin: 0 1em;
+}
+.the-end img:last-of-type {
+  transform: translateY(6px) scaleX(-1);
+}
+.right-align {
+  text-align: right;
+}
+
+.interlude {
+  display: block;
+  text-align: center;
+  font-style: italic;
+  margin-top: 25vh;
+}
+
+.scene-heading {
+  text-align: center;
+  font-family: "IM Fell English SC";
+  /* font-variant: small-caps; */ /* Implied by the font */
+}
+
+.harold, .janie, .esther, .father {
+  font-weight: bold;
+}
+.harold {
+  color: #781CFF;
+}
+.janie {
+  color: #368000;
+}
+.esther {
+  color: #3874a8;
+}
+.father {
+  color: #b7009a;
+}
+
+#back-button {
+  position: absolute;
+  display: none;
+  top: 50px;
+  left: -120px;
+  color: #fff6;
+  font-weight: 900;
+  font-family: sans-serif;
+}
+#back-button:hover {
+  color: #fffc;
+}
+#back-button.showing {
+  display: block;
+}
+/* No back button on mobile */
+@media only screen and (max-width: 600px) {
+  #back-button.showing {
+    display: none;
+  }
+}
+#back-button .arrow {
+  font-size: 100px;
+}
+#back-button .text {
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  right: 3px;
+}
+
+.dev-panel {
+  position: absolute;
+  width: 300px;
+  top: 1em;
+  right: 0;
+  background-color: white;
+  border: solid black thin;
+  padding: 1em;
+  font-size: 10pt;
+  font-family: sans-serif;
+}
+@media only screen and (max-width: 600px) {
+  .dev-panel {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: unset;
+    width: unset;
+  }
+}

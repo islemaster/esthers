@@ -1,0 +1,30 @@
+{
+  "name": "toast",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "lodash": "^4.17.21",
+    "puppeteer": "^14.2.1",
+    "tape": "^5.5.3"
+  },
+  "scripts": {
+    "build": "$(go env GOPATH)/bin/tweego -o main.html src",
+    "test": "tape test/*.js",
+    "watch": "$(go env GOPATH)/bin/tweego -o main.html --watch --test src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/islemaster/toast.git"
+  },
+  "author": "islemaster",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/islemaster/toast/issues"
+  },
+  "homepage": "https://github.com/islemaster/toast#readme"
+}

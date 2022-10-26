@@ -1,0 +1,11 @@
+index.html
+main.html
+.vscode/*
+node_modules
+*.xcf
+*.zip
+src_book/*
+stickers/*
+certificates/*
+feedback.md
+knots.md

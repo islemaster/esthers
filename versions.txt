@@ -1,0 +1,7 @@
+Version history
+
+2022-09-28.1: Initial release for IFComp 2022
+
+2022-10-03.1: Fixed one typo:
+  - "The would pair well with a mimosa," said Janie
+  + "They would pair well with a mimosa," said Janie
