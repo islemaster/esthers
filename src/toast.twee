@@ -572,6 +572,8 @@ As the two mice scurried away, they agreed it was the best brunch they'd ever ha
 
 Built with <a href="https://videlais.github.io/snowman/#/" target="_blank">Snowman 2.0.3</a> and <a href="http://www.motoslave.net/tweego/" target="_blank">Tweego 2.1.1</a>.
 
+<tt>v2022-11-21.1</tt>. <a href="https://github.com/islemaster/esthers" target="_blank">View source</a>.
+
 Deepest thanks to our playtesters: Alex, Anisha, Emmanuel, Eric, Josephine, Madelyn, Marisa, Victor, and Yotam.
 
 :: Title-Acknowledgements
@@ -582,7 +584,7 @@ Deepest thanks to our playtesters: Alex, Anisha, Emmanuel, Eric, Josephine, Made
 
 :: Endnote
 
-<%= story.render('Acknowledgements') %> 
+<%= story.render('Acknowledgements') %>
 
 We hope you enjoyed our story. May you be as determined as Janie to get your mimosas and avocado toast, and as happy as Harold with the cheese along the way. Cheers!
 
@@ -594,6 +596,8 @@ We hope you enjoyed our story. May you be as determined as Janie to get your mim
 </div>
 
 :: Extras
+
+<em>Esther's</em> was first released for <a href="https://ifcomp.org/comp/2022" target="_blank">IFComp 2022</a> where it tied for 17th place and received lots of nice comments. For our reflections on development and the comp, see <a href="https://www.bradleycbuchanan.com/b/building-esthers-cafe/" target="_blank">Building Esther's Cafe</a>.
 
 A puzzle map from partway through development.
 

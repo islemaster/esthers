@@ -23,7 +23,7 @@ module.exports = class SyntheticPlayer {
       // devtools: true,
     });
     this.page = await this.browser.newPage();
-    await this.page.goto(`file:${path.join(__dirname, '..', 'main.html?automation=true')}`);
+    await this.page.goto(`file:${path.join(__dirname, '..', 'index.html?automation=true')}`);
 
     // Keep known knots organized by passage name for quicker lookup.
     this.knotsByPassageName = {};

@@ -5,3 +5,7 @@ Version history
 2022-10-03.1: Fixed one typo:
   - "The would pair well with a mimosa," said Janie
   + "They would pair well with a mimosa," said Janie
+
+2022-11-21.1: Post-comp release.
+  + Version number and link to source in acknowledgements.
+  + Comp results and link to postmortem in Bonus Content.
