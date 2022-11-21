@@ -2,9 +2,9 @@
 
 # Esther's
 
-A Brunch Story by Alleson and Brad Buchanan
+A Brunch Story by Alleson and Brad Buchanan. [Play online](https://bradleycbuchanan.com/esthers).
 
-Initially released for [IFComp 2022](https://ifcomp.org).
+Initially released for [IFComp 2022](https://ifcomp.org/comp/2022), where it tied for 17th place.
 
 &nbsp;
 
